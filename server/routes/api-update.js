@@ -7,7 +7,7 @@ module.exports = function(db, app, ObjectID){
         product = req.body;
         var objectid = new ObjectID(product.objid);
         const collection = db.collection('products');
-        collection.updateOne({id: objectid}, {$set: {name: product.name, description: product.description, price: product.price, units: product.units}}, ()=>{
+        collection.updateOne({_id: objectid}, {$set: {name: product.name, description: product.description, price: product.price, units: product.units}}, ()=>{
             //Update successful message
             res.send({'ok':product.objid});
             console.log("Success updating!");
