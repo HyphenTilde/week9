@@ -17,9 +17,9 @@ client.connect(function(err){
     const db = client.db(dbName);
     const collection = db.collection(colName);
     const testArray = [{id: 0, name: "Brush", Description: "It looks nice", price: 200, units: 12},{id: 1, name: "Couch", Description: "It is comfy", price: 1000, units: 2}, {id: 2, name: "Coat", Description: "It feels nice", price: 100, units: 5}];
-    add(collection, testArray);
-    read(collection);
-    update(collection, {id: 0, name: "Brush", Description: "It looks nice", price: 200, units: 12}, 2);
-    remove(collection, {id: 0, name: "Brush", Description: "It looks nice", price: 200, units: 12});
-    
+    //add(collection, testArray);
+    //read(collection);
+    //update(collection, {id: 0, name: "Brush", Description: "It looks nice", price: 200, units: 12}, 2);
+    //remove(collection, {id: 0, name: "Brush", Description: "It looks nice", price: 200, units: 12});
+    client.close();
 });
